@@ -1,1 +1,153 @@
-<h1>Hello!</h1>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Alkatra&family=EB+Garamond&family=Montserrat:wght@200&display=swap');
+    :root{
+        --accent-color: #00ff91;
+        --bg-color: #1b6645;
+        --accent-color: #2020b3;
+        --text-color: #e8caca;
+    }
+    
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    a{
+        text-decoration: none;
+        color: var(--text-color);
+    }
+    body{
+        min-height: 100%;
+    }
+    .layout{
+        font-family: 'Montserrat', sans-serif;
+        color: var(--text-color);
+        min-height: 100%;
+        background: linear-gradient(var(--bg-color), #0f3927);
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        grid-template-rows: max-content 1fr;
+    }
+    .layout header{
+        padding: 2em;
+        grid-column: 1/3;
+        grid-row: 1/2;
+        display: grid;
+        grid-template-rows: max-content;
+        grid-template-columns: max-content 1fr;
+        align-items: center;
+    }
+    .layout header h1{
+        font-family: 'Alkatra', cursive;
+    }
+    .layout header div{
+        justify-self: flex-end;
+    }
+    .layout header div a{
+        margin-left: 4em;
+    }
+    .layout aside{
+        grid-column: 1/2;
+        grid-row: 2/3;
+        display: grid;
+        padding: 1em;
+        grid-template-rows: repeat(4, min-content);
+        align-content: flex-end;
+    }
+    .layout aside a{
+        align-self: center;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        width: 4em;
+        height: 4em;
+        padding: 1em;
+        margin-bottom: 2em;
+        background-color: #005530;
+        border-radius: 1em;
+    }
+    main{
+        margin-top: 8em;
+        padding: 2em;
+        background-color: var(--main-color);
+        grid-column: 1/3;
+        grid-row: 2/3;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: max-content;
+        justify-items: center;
+    }
+
+    main h1{
+        font-family: 'EB Garamond', serif;
+        font-size: 4em;
+        margin-bottom: 0.4em;
+        justify-content: center;
+        font-weight: 400;
+    } 
+    main div{
+        max-width: 85%;
+    }
+    main img{
+        max-width: 85%;
+        block-size: auto;
+        opacity: 0.8;
+        border-radius: 1em;
+        justify-self: center;
+    }
+    @media only screen and (max-width: 1050px) {
+       main{    
+            grid-template-columns: 1fr !important;
+            margin-top: 1em;
+            grid-template-rows: max-content 1fr !important;
+       } 
+       main img{
+            margin-top: 2em;
+       }
+       aside{
+            margin: 0;
+            z-index: 2;;
+            position: fixed;
+            background-color: #0f3927ae;
+            justify-items: center;
+            grid-column: 1/3;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            grid-template-columns: repeat(4, 1fr);
+       }
+       aside a{
+            margin-bottom: 0 !important;
+            width: 4em !important;
+            height: 4em !important;
+            align-self: center;
+       }
+
+    }
+
+</style>
+<body>
+    <div class="layout">
+        <header>
+            <h1>PlantBased</h1>
+            <div>
+                <a href="">Home</a>
+                <a href="">Profile</a>
+                <a href="">Help</a>
+            </div>
+        </header>
+        <aside>
+            <a href="">A</a>
+            <a href="">B</a>
+            <a href="">C</a>
+            <a href="">D</a>
+        </aside>
+        <main>
+            <div><h1>Start eating plants today!</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta iusto ab, sint quae reprehenderit eaque quis illo qui laboriosam quam odit praesentium officia, provident doloremque quo placeat dolorem distinctio consequuntur.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta iusto ab, sint quae reprehenderit eaque quis illo qui laboriosam quam odit praesentium officia, provident doloremque quo placeat dolorem distinctio consequuntur.</p>
+            </div>
+            <img src="https://st.hzcdn.com/simgs/pictures/landscapes/herb-and-vegetable-gardens-the-jcrd-group-img~ad71af2708ffa9b9_4-3153-1-c7da1df.jpg">
+        </main>
+    </div> 
+</body>
